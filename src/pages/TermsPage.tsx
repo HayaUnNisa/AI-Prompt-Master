@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const sections = [
   {
     title: 'Acceptance of Terms',
-    content: `By accessing or using Haya Un Nisa, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use the website. These terms apply to all visitors, users, and anyone who accesses or uses the service.`,
+    content: `By accessing or using Prompt Master, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use the website. These terms apply to all visitors, users, and anyone who accesses or uses the service.`,
   },
   {
     title: 'Educational Content',

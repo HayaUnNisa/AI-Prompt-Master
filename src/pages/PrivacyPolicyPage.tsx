@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const sections = [
   {
     title: 'Information We Collect',
-    content: `When you visit Haya Un Nisa, we may collect certain information automatically, including your browser type, device type, pages visited, and approximate location based on IP address. This data is collected through standard analytics tools to help us understand how visitors use the site.
+    content: `When you visit Prompt Master, we may collect certain information automatically, including your browser type, device type, pages visited, and approximate location based on IP address. This data is collected through standard analytics tools to help us understand how visitors use the site.
 
 If you sign up for our newsletter or fill out a contact form, we collect the personal information you provide, such as your name and email address. When you purchase an ebook, payment is processed by a third-party payment provider and we do not store your financial details.`,
   },

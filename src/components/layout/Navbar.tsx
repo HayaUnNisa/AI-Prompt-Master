@@ -51,14 +51,36 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            {/* HN monogram icon */}
-            <div className="relative w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)', padding: '2px' }}>
+            <div
+              className="relative w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{
+                background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
+                padding: '2px',
+              }}
+            >
               <div className="w-full h-full rounded-[9px] bg-void flex items-center justify-center">
-                <span className="font-display font-bold text-sm" style={{ background: 'linear-gradient(135deg, #a78bfa, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>HN</span>
+                <span
+                  className="font-display font-bold text-sm"
+                  style={{
+                    background: 'linear-gradient(135deg, #a78bfa, #22d3ee)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  A 
+                </span>
               </div>
             </div>
-            <span className="font-display font-bold text-lg tracking-wide" style={{ background: 'linear-gradient(135deg, #a78bfa, #22d3ee)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Haya Un Nisa
+
+            <span
+              className="font-display font-bold text-lg tracking-wide"
+              style={{
+                background: 'linear-gradient(135deg, #a78bfa, #22d3ee)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+             Academia
             </span>
           </Link>
 
@@ -76,9 +98,12 @@ export default function Navbar() {
                     {link.label}
                     <ChevronDown
                       size={14}
-                      className={`transition-transform duration-200 ${dropdown === link.label ? 'rotate-180' : ''}`}
+                      className={`transition-transform duration-200 ${
+                        dropdown === link.label ? 'rotate-180' : ''
+                      }`}
                     />
                   </button>
+
                   <AnimatePresence>
                     {dropdown === link.label && (
                       <motion.div
@@ -119,9 +144,14 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link to="/contact" className="text-sm text-slate-400 hover:text-white transition-colors px-3 py-2">
+            <Link to="/my-learning">My Learning</Link>
+            <Link
+              to="/contact"
+              className="text-sm text-slate-400 hover:text-white transition-colors px-3 py-2"
+            >
               Contact
             </Link>
+
             <Link to="/ebooks" className="btn-primary text-sm px-5 py-2.5">
               Get Ebooks
             </Link>
@@ -155,6 +185,7 @@ export default function Navbar() {
                     <div className="px-3 py-2 text-xs font-mono font-medium text-purple-400 uppercase tracking-wider">
                       {link.label}
                     </div>
+
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
@@ -179,11 +210,19 @@ export default function Navbar() {
                   </Link>
                 )
               )}
+
               <div className="pt-3 flex flex-col gap-2">
-                <Link to="/contact" className="btn-secondary justify-center text-sm">
+                <Link
+                  to="/contact"
+                  className="btn-secondary justify-center text-sm"
+                >
                   Contact
                 </Link>
-                <Link to="/ebooks" className="btn-primary justify-center text-sm">
+
+                <Link
+                  to="/ebooks"
+                  className="btn-primary justify-center text-sm"
+                >
                   Get Ebooks
                 </Link>
               </div>

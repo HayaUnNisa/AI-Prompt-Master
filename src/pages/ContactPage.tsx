@@ -8,7 +8,7 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description: 'For general questions, course feedback, or ebook support.',
-    value: 'hello@hayaunnisa.com',
+    value: 'Academia@gmail.com',
     color: 'text-purple-400',
     bg: 'bg-purple-500/10',
     border: 'border-purple-500/20',
@@ -17,7 +17,7 @@ const contactMethods = [
     icon: MessageSquare,
     title: 'Feedback',
     description: 'Suggestions for new courses, prompt categories, or content topics.',
-    value: 'feedback@hayaunnisa.com',
+    value: 'feedback@Academia.com',
     color: 'text-cyan-400',
     bg: 'bg-cyan-500/10',
     border: 'border-cyan-500/20',
@@ -50,10 +50,9 @@ export default function ContactPage() {
     <div className="pt-24 pb-20">
       <PageHero
         badge="Get in Touch"
-        title="We Would Love to"
-        highlight="Hear From You"
+        title="We Would Love to Hear From You"
         description="Have a question about a course, a prompt technique, or just want to share feedback? Send us a message and we will get back to you."
-      />
+        />
 
       <div className="container-wide section-padding">
         {/* Contact method cards */}
@@ -128,12 +127,15 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm text-slate-400 mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-sm text-slate-400 mb-2">
+                   Subject
+                  </label>
                   <select
-                    name="subject"
-                    value={form.subject}
-                    onChange={handleChange}
-                    required
+                  id="subject"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  required
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500/50 transition-colors appearance-none"
                   >
                     <option value="" className="bg-slate-800">Select a topic</option>

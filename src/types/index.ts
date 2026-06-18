@@ -3,14 +3,13 @@ export interface Blog {
   slug: string
   title: string
   excerpt: string
-  content: string
   category: string
   tags: string[]
   author: string
   date: string
   readTime: string
   coverImage: string
-  featured: boolean
+  featured?: boolean
 }
 
 export interface Course {
@@ -31,9 +30,40 @@ export interface Course {
   modules: CourseModule[]
 }
 
+export interface QuizQuestion {
+  question: string
+  options: string[]
+  answer: number
+  explanation?: string
+}
+
+export interface CourseQuiz {
+  title: string
+  questions: QuizQuestion[]
+}
+
 export interface CourseModule {
   title: string
   lessons: string[]
+  quiz?: CourseQuiz
+}
+
+export interface Course {
+  id: string
+  slug: string
+  title: string
+  description: string
+  level: 'Beginner' | 'Intermediate' | 'Advanced'
+  category: string
+  lessons: number
+  duration: string
+  rating: number
+  students: number
+  tags: string[]
+  coverImage: string
+  instructor: string
+  featured: boolean
+  modules: CourseModule[]
 }
 
 export interface Ebook {

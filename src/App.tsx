@@ -17,6 +17,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 import TermsPage from './pages/TermsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ChatbotWidget from './components/chatbot/ChatbotWidget'
+import MyLearningPage from './pages/MyLearningPage'
 
 function App() {
   const [darkMode] = useState(true)
@@ -41,6 +42,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/my-learning" element={<MyLearningPage />} />
           </Routes>
         </Layout>
         <ChatbotWidget />
