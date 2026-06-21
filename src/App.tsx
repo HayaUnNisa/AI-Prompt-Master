@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'
+
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import BlogsPage from './pages/BlogsPage'
@@ -18,6 +20,19 @@ import TermsPage from './pages/TermsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ChatbotWidget from './components/chatbot/ChatbotWidget'
 import MyLearningPage from './pages/MyLearningPage'
+import SignInPage from './pages/SignInPage'
+import SignUpPage from './pages/SignUpPage'
+
+function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <SignedIn>{children}</SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
+  )
+}
 
 function App() {
   const [darkMode] = useState(true)
@@ -28,6 +43,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
+
+            <Route path="/sign-in/*" element={<SignInPage />} />
+            <Route path="/sign-up/*" element={<SignUpPage />} />
+
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blogs/:slug" element={<BlogDetailPage />} />
             <Route path="/courses" element={<CoursesPage />} />
@@ -41,10 +60,20 @@ function App() {
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsPage />} />
+
+            <Route
+              path="/my-learning"
+              element={
+                <ProtectedRoute>
+                  <MyLearningPage />
+                </ProtectedRoute>
+              }
+            />
+
             <Route path="*" element={<NotFoundPage />} />
-            <Route path="/my-learning" element={<MyLearningPage />} />
           </Routes>
         </Layout>
+
         <ChatbotWidget />
       </Router>
     </div>

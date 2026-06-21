@@ -4,77 +4,85 @@ export const resources: Resource[] = [
   {
     id: '1',
     title: 'The Prompt Engineering Cheatsheet',
-    description: 'A one-page reference covering the core prompt frameworks, common patterns, and quick-fix tips. Print it and keep it at your desk.',
+    description:
+      'A practical reference covering prompt formulas, frameworks, examples, and quick-fix tips for better AI results.',
     type: 'Cheatsheet',
     category: 'Foundations',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Prompt_Engineering_Cheatsheet_Aicadmia.pdf',
     free: true,
     size: '1.2 MB PDF',
   },
   {
     id: '2',
     title: 'Business Prompt Templates Pack',
-    description: '25 ready-to-use prompt templates for common business tasks: emails, reports, proposals, social media, and customer communication.',
+    description:
+      'Ready-to-use prompt templates for emails, reports, proposals, sales, marketing, operations, and business communication.',
     type: 'Template',
     category: 'Business',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Business_Prompt_Templates_Pack_Aicadmia.pdf',
     free: true,
     size: '0.8 MB PDF',
   },
   {
     id: '3',
-    title: 'AI Tool Comparison Guide 2024',
-    description: 'A detailed comparison of ChatGPT, Claude, Gemini, Perplexity, and Copilot. Strengths, weaknesses, pricing, and use case recommendations.',
+    title: 'AI Tool Comparison Guide 2026',
+    description:
+      'A detailed comparison of major AI tools including strengths, weaknesses, pricing, and best use cases.',
     type: 'Guide',
     category: 'AI Tools',
-    downloadUrl: '#',
+    downloadUrl: '/resources/AI_Tool_Comparison_Guide_2026_Aicadmia.pdf',
     free: true,
     size: '2.1 MB PDF',
   },
   {
     id: '4',
     title: 'Student Prompt Starter Kit',
-    description: 'Everything a student needs to start using AI ethically: 15 study prompts, an academic integrity checklist, and a workflow guide.',
+    description:
+      'A student-friendly kit with study prompts, writing prompts, research prompts, and ethical AI usage guidance.',
     type: 'Template',
     category: 'Education',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Student_Prompt_Starter_Kit_Aicadmia.pdf',
     free: true,
     size: '1.5 MB PDF',
   },
   {
     id: '5',
     title: 'Prompt Quality Checklist',
-    description: 'A 20-point checklist to review before sending any important prompt. Covers role, context, format, constraints, and iteration tips.',
+    description:
+      'A complete checklist to review, score, and improve prompts before using them for important AI tasks.',
     type: 'Checklist',
     category: 'Foundations',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Prompt_Quality_Checklist_Aicadmia.pdf',
     free: true,
     size: '0.4 MB PDF',
   },
   {
     id: '6',
     title: 'Content Creator Prompt Playbook',
-    description: 'A structured workflow for bloggers and YouTubers: idea generation, research, outlining, drafting, editing, and repurposing with AI.',
+    description:
+      'A structured playbook for blogs, videos, newsletters, captions, hooks, outlines, and content repurposing.',
     type: 'Guide',
     category: 'Content Creation',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Content_Creator_Prompt_Playbook_Aicadmia.pdf',
     free: true,
     size: '1.8 MB PDF',
   },
   {
     id: '7',
     title: 'Developer Prompt Reference Card',
-    description: 'Quick-reference prompts for code generation, debugging, documentation, and code review. Fits on a single laminated card.',
+    description:
+      'Developer-focused prompts for code generation, debugging, refactoring, documentation, testing, and code review.',
     type: 'Cheatsheet',
     category: 'Coding',
-    downloadUrl: '#',
+    downloadUrl: '/resources/Developer_Prompt_Reference_Card_Aicadmia.pdf',
     free: true,
     size: '0.6 MB PDF',
   },
   {
     id: '8',
     title: 'System Prompt Writing Guide',
-    description: 'Step-by-step guide to writing effective system prompts for custom GPTs, Claude Projects, and API integrations.',
+    description:
+      'Step-by-step guide to writing effective system prompts for custom GPTs, Claude Projects, and API integrations.',
     type: 'Guide',
     category: 'Advanced',
     downloadUrl: '#',
@@ -98,75 +106,66 @@ export const faqs: FAQ[] = [
   {
     id: '1',
     question: 'Do I need to be technical to learn prompt engineering?',
-    answer: 'No. Prompt engineering is about clear communication, not coding. If you can write a clear email or give good instructions to a colleague, you already have the foundation. Our beginner courses start from zero technical knowledge.',
+    answer:
+      'No. Prompt engineering is about clear communication, not coding. If you can write a clear email or give good instructions, you already have the foundation.',
     category: 'Getting Started',
   },
   {
     id: '2',
     question: 'Which AI tool should I start with?',
-    answer: 'For most beginners, ChatGPT (free tier) or Claude (free tier) are excellent starting points. Both are capable, free to use with a basic account, and work well with the prompting techniques we teach. We have a full comparison guide in our Resources section.',
+    answer:
+      'For most beginners, ChatGPT or Claude are excellent starting points. Both work well with the prompting techniques taught on Aicadmia.',
     category: 'Getting Started',
   },
   {
     id: '3',
     question: 'Are the courses completely free?',
-    answer: 'Yes — all courses listed on this platform are free. We earn through our ebooks and downloadable resources, which go into much greater depth. The courses are designed to give you real, actionable knowledge — not just teasers.',
+    answer:
+      'Yes. All courses listed on this platform are free. Downloadable resources and ebooks may include both free and premium options.',
     category: 'Courses',
   },
   {
     id: '4',
-    question: 'What format are the ebooks delivered in?',
-    answer: 'All ebooks are available in PDF and EPUB format. After purchase, you will receive a download link via email. The files are yours to keep and read on any device.',
-    category: 'Ebooks',
+    question: 'What format are the resources delivered in?',
+    answer:
+      'Most resources are delivered as PDF files. Some may also include templates, checklists, or reference cards.',
+    category: 'Resources',
   },
   {
     id: '5',
-    question: 'How is prompt engineering different for different AI tools?',
-    answer: 'The core principles are the same across tools — clarity, context, role, and format matter everywhere. The differences are in tone response, output length preferences, and specific capabilities like web access (Gemini, Perplexity) or image generation (ChatGPT Plus, Copilot). Our tool-specific tips pages cover these differences.',
-    category: 'Prompting',
+    question: 'Can I use these prompts for commercial purposes?',
+    answer:
+      'Yes. The prompts are templates designed for you to adapt and use in your own work, including business and commercial projects. The PDF files themselves should not be resold or redistributed.',
+    category: 'Resources',
   },
   {
     id: '6',
-    question: 'Do you offer refunds on ebooks?',
-    answer: 'Yes. If you are not satisfied with an ebook within 14 days of purchase, we will issue a full refund. Contact us via the Contact page with your order details.',
-    category: 'Ebooks',
+    question: 'How often is the content updated?',
+    answer:
+      'Aicadmia resources are reviewed and updated as AI tools and prompting best practices evolve.',
+    category: 'General',
   },
   {
     id: '7',
-    question: 'How often is the content updated?',
-    answer: 'We review and update course content and prompt templates regularly as AI tools evolve. Blog posts and the AI Tools directory are updated whenever significant changes happen in the tools we cover.',
-    category: 'General',
-  },
-  {
-    id: '8',
-    question: 'Can I use these prompts for commercial purposes?',
-    answer: 'Yes. The prompts in our library and ebooks are templates designed for you to use and adapt freely — including for business and commercial work. The ebook content itself is for personal use only and should not be resold or redistributed.',
-    category: 'General',
-  },
-  {
-    id: '9',
-    question: 'What is the chatbot on this site for?',
-    answer: 'The chatbot is an AI assistant trained to help you with prompt-related questions. Ask it for prompt recommendations, help writing a prompt for a specific task, or explanations of prompting techniques. It is powered by the same AI models we teach about.',
-    category: 'General',
-  },
-  {
-    id: '10',
-    question: 'Is my payment information secure?',
-    answer: 'Yes. All payments are processed through Stripe, which is PCI DSS Level 1 certified — the highest level of payment security certification. We never see or store your full card details.',
-    category: 'Ebooks',
-  },
-  {
-    id: '11',
     question: 'Will I get certificates for completing courses?',
-    answer: 'Not currently. Our focus is on practical knowledge rather than credentials. That said, we are working on a completion badge system and may introduce certificates in the future.',
+    answer:
+      'Not currently. The focus is practical learning, but completion badges or certificates may be added later.',
     category: 'Courses',
   },
   {
-    id: '12',
+    id: '8',
     question: 'Can AI writing be detected by plagiarism tools?',
-    answer: 'AI detection is an evolving and imperfect field. Current AI detectors have significant false positive rates and are unreliable as a definitive measure. We focus on teaching you to use AI as a writing assistant that improves your work — not to replace your own thinking.',
+    answer:
+      'AI detection tools are imperfect and can produce false results. Aicadmia teaches ethical AI use, editing, and responsible learning instead of copying AI output blindly.',
     category: 'Prompting',
   },
 ]
 
-export const faqCategories = ['All', 'Getting Started', 'Courses', 'Ebooks', 'Prompting', 'General']
+export const faqCategories = [
+  'All',
+  'Getting Started',
+  'Courses',
+  'Resources',
+  'Prompting',
+  'General',
+]

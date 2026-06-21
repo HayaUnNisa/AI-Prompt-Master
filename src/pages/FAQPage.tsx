@@ -18,17 +18,16 @@ export default function FAQPage() {
   return (
     <div className="pt-24 pb-20">
       <PageHero
-        badge="FAQ"
-        title="Frequently Asked"
-        highlight="Questions"
-        description="Answers to the most common questions about prompt engineering, our courses, ebooks, and how to get the most out of AI tools."
-      />
+      badge="FAQ"
+      title="Frequently Asked Questions"
+      description="Answers to the most common questions about prompt engineering, our courses, ebooks, and how to get the most out of AI tools."
+       />
 
       <div className="container-wide section-padding">
         <FilterTabs
-          options={allCategories}
-          value={activeCategory}
-          onChange={setActiveCategory}
+        options={allCategories}
+        active={activeCategory}
+        onChange={setActiveCategory}
         />
 
         <div className="max-w-3xl mx-auto mt-10 space-y-3">

@@ -1,99 +1,121 @@
-import { motion } from 'framer-motion'
-import { ShoppingCart, Star, Check, FileText } from 'lucide-react'
-import PageHero from '../components/ui/PageHero'
-import { ebooks } from '../data/ebooks'
+import { motion } from "framer-motion";
+import { BookOpen, CheckCircle, Rocket, Mail } from "lucide-react";
 
 export default function EbooksPage() {
   return (
-    <div>
-      <PageHero
-        badge="Digital Ebooks"
-        title="Go Deeper with"
-        titleHighlight="Comprehensive Guides"
-        description="Detailed ebooks on prompt engineering for every use case. Tested, organized, and built for practical use — not shelf decoration."
-      />
+    <div className="pt-24 pb-20 min-h-screen">
+      <section className="container-wide section-padding">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium mb-8"
+          >
+            <span>⏳</span>
+            Coming Soon
+          </motion.div>
 
-      <section className="pb-20">
-        <div className="container-wide section-padding">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ebooks.map((ebook, i) => (
+          {/* Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          >
+            Ebooks{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Coming Soon
+            </span>
+          </motion.h1>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-slate-400 max-w-2xl mx-auto mb-14 leading-relaxed"
+          >
+            We’re working hard to bring you comprehensive, practical, and
+            high-quality ebooks that will help you go deeper in your AI
+            journey.
+          </motion.p>
+
+          {/* Features */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: BookOpen,
+                title: "In-Depth Guides",
+                desc: "Well-researched, detailed ebooks on AI and prompt engineering.",
+              },
+              {
+                icon: CheckCircle,
+                title: "Practical & Actionable",
+                desc: "Real-world examples, templates, and workflows you can use immediately.",
+              },
+              {
+                icon: Rocket,
+                title: "Built for You",
+                desc: "Created for learners, creators, developers, and businesses.",
+              },
+            ].map((item, i) => (
               <motion.div
-                key={ebook.id}
-                initial={{ opacity: 0, y: 30 }}
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.07 }}
+                transition={{ delay: 0.3 + i * 0.1 }}
+                className="glass-card p-6 text-left"
               >
-                <div className="glow-border glass-card h-full p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
-                  {ebook.badge && (
-                    <div className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-purple-500/30 border border-purple-500/40 text-xs font-mono text-purple-300">
-                      {ebook.badge}
-                    </div>
-                  )}
-
-                  {/* Cover */}
-                  <div className="flex gap-4 mb-5">
-                    <div className="w-20 h-28 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
-                      <img src={ebook.coverImage} alt={ebook.title} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="flex flex-col justify-center">
-                      <div className="flex items-center gap-0.5 mb-2">
-                        {[...Array(5)].map((_, j) => (
-                          <Star key={j} size={12} className="text-yellow-400 fill-yellow-400" />
-                        ))}
-                      </div>
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-display font-bold text-white">${ebook.price}</span>
-                        <span className="text-sm text-slate-500 line-through">${ebook.originalPrice}</span>
-                      </div>
-                      <div className="text-xs text-green-400 font-mono mt-1">
-                        {Math.round((1 - ebook.price / ebook.originalPrice) * 100)}% off
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Info */}
-                  <h2 className="font-display font-semibold text-white text-base mb-2 leading-snug">
-                    {ebook.title}
-                  </h2>
-                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">{ebook.description}</p>
-
-                  {/* Topics */}
-                  <div className="space-y-1.5 mb-5">
-                    {ebook.topics.slice(0, 4).map((topic) => (
-                      <div key={topic} className="flex items-start gap-2 text-xs text-slate-400">
-                        <Check size={12} className="text-green-400 mt-0.5 flex-shrink-0" />
-                        {topic}
-                      </div>
-                    ))}
-                    {ebook.topics.length > 4 && (
-                      <div className="text-xs text-slate-500 pl-5">+{ebook.topics.length - 4} more topics</div>
-                    )}
-                  </div>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between text-xs text-slate-500 mb-5">
-                    <span className="flex items-center gap-1"><FileText size={11} />{ebook.pages} pages</span>
-                    <span>{ebook.format.join(' · ')}</span>
-                  </div>
-
-                  <button className="btn-primary w-full justify-center text-sm py-3">
-                    <ShoppingCart size={15} />
-                    Buy for ${ebook.price}
-                  </button>
+                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-purple-400" />
                 </div>
+
+                <h3 className="font-display text-xl font-semibold text-white mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-slate-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
-          {/* Trust Section */}
-          <div className="mt-16 glass-card p-8 text-center max-w-2xl mx-auto">
-            <h3 className="font-display font-bold text-xl text-white mb-3">14-Day Money-Back Guarantee</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              If you are not satisfied with any ebook within 14 days of purchase, contact us for a full refund — no questions asked. Payment is processed securely through Stripe.
+          {/* Notify Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="glass-card p-8 max-w-3xl mx-auto"
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Mail className="w-6 h-6 text-purple-400" />
+              <h3 className="font-display text-2xl font-semibold text-white">
+                Get Notified When We Launch
+              </h3>
+            </div>
+
+            <p className="text-slate-400 mb-6">
+              Be the first to know when our ebooks are ready.
             </p>
-          </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 outline-none"
+              />
+              <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition">
+                Notify Me
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Footer Note */}
+          <p className="mt-10 text-slate-500 text-sm">
+            Thank you for your patience and support.
+          </p>
         </div>
       </section>
     </div>
-  )
+  );
 }

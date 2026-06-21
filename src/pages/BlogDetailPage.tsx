@@ -13,6 +13,10 @@ import AiPromptsForStudents from './blogs/AiPromptsForStudents'
 import HowToTalkToAiLikeAPro from './blogs/HowToTalkToAiLikeAPro'
 import WhatAreSystemPrompts from './blogs/WhatAreSystemPrompts'
 import BestChatGPTPromptsForStudents from './blogs/BestChatGPTPromptsForStudents'
+import FewShotVsZeroShotPrompting from './blogs/FewShotVsZeroShotPrompting'
+import HowAIMemoryChangesPrompting from './blogs/HowAIMemoryChangesPrompting'
+import ReusablePromptTemplates from './blogs/ReusablePromptTemplates'
+import RolePromptingWhyItWorks from './blogs/RolePromptingWhyItWorks'
 
 const blogComponents: Record<string, React.ComponentType> = {
   'how-to-write-better-chatgpt-prompts': HowToWriteBetterChatGPTPrompts,
@@ -24,6 +28,10 @@ const blogComponents: Record<string, React.ComponentType> = {
   'how-to-talk-to-ai-like-a-pro': HowToTalkToAiLikeAPro,
   'what-are-system-prompts': WhatAreSystemPrompts,
   'best-chatgpt-prompts-for-students': BestChatGPTPromptsForStudents,
+  'few-shot-prompting-vs-zero-shot-prompting': FewShotVsZeroShotPrompting,
+  'how-ai-memory-changes-prompting': HowAIMemoryChangesPrompting,
+  'how-to-build-reusable-prompt-templates': ReusablePromptTemplates,
+  'role-prompting-why-it-works': RolePromptingWhyItWorks,
 }
 
 export default function BlogDetailPage() {

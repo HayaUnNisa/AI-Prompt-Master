@@ -142,8 +142,70 @@ export const blogs: Blog[] = [
   coverImage:
   'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80',
   featured: false,
-}
+},
+{
+  id: '10',
+  slug: 'few-shot-prompting-vs-zero-shot-prompting',
+  title: 'Few-Shot Prompting vs Zero-Shot Prompting',
+  excerpt:
+    'Learn the key difference between few-shot and zero-shot prompting, and when to use each for better AI outputs.',
+  category: 'Prompt Engineering',
+  tags: ['Few-Shot', 'Zero-Shot', 'Prompting'],
+  author: 'Aicadmia Team',
+  date: '2026-06-18',
+  readTime: '8 min read',
+  coverImage:
+    'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+  featured: true,
+},
 
+{
+  id: '11',
+  slug: 'how-ai-memory-changes-prompting',
+  title: 'How AI Memory Changes Prompting',
+  excerpt:
+    'AI memory is changing how prompts work. Learn how context persistence affects prompting strategies.',
+  category: 'Prompt Engineering',
+  tags: ['AI Memory', 'Prompting', 'Context'],
+  author: 'Aicadmia Team',
+  date: '2026-06-18',
+  readTime: '9 min read',
+  coverImage:
+    'https://images.unsplash.com/photo-1676299081847-824916de030a?w=800&q=80',
+  featured: true,
+},
+
+{
+  id: '12',
+  slug: 'how-to-build-reusable-prompt-templates',
+  title: 'How to Build Reusable Prompt Templates',
+  excerpt:
+    'Reusable prompt templates save time, improve consistency, and make AI workflows far more efficient.',
+  category: 'Advanced Prompting',
+  tags: ['Templates', 'Prompt Systems', 'Workflow'],
+  author: 'Aicadmia Team',
+  date: '2026-06-18',
+  readTime: '10 min read',
+  coverImage:
+    'https://images.unsplash.com/photo-1678483789103-d6f7d8c4eaf5?w=800&q=80',
+  featured: true,
+},
+
+{
+  id: '13',
+  slug: 'role-prompting-why-it-works',
+  title: 'Role Prompting: Why It Works',
+  excerpt:
+    'Role prompting can dramatically improve AI output quality. Learn why telling AI who to act as changes everything.',
+  category: 'Prompt Engineering',
+  tags: ['Role Prompting', 'Prompting', 'AI Roles'],
+  author: 'Aicadmia Team',
+  date: '2026-06-18',
+  readTime: '8 min read',
+  coverImage:
+    'https://images.unsplash.com/photo-1675557009875-436f9e9d2e72?w=800&q=80',
+  featured: true,
+},
 ]
 export const blogCategories = [
   'All',

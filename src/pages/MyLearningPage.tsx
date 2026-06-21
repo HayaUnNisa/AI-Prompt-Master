@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { SignedIn, SignedOut, RedirectToSignIn, useUser } from '@clerk/clerk-react'
 import {
   BookOpen,
   CheckCircle2,
@@ -8,17 +9,17 @@ import {
 } from 'lucide-react'
 import { courses } from '../data/courses'
 
-export default function MyLearningPage() {
+function MyLearningContent() {
+  const { user } = useUser()
+
   let progress: Record<string, Record<string, boolean>> = {}
   let savedCourses: string[] = []
 
-try {
-  savedCourses = JSON.parse(
-    localStorage.getItem('saved-courses') || '[]'
-  )
-} catch {
-  savedCourses = []
-}
+  try {
+    savedCourses = JSON.parse(localStorage.getItem('saved-courses') || '[]')
+  } catch {
+    savedCourses = []
+  }
 
   try {
     progress = JSON.parse(localStorage.getItem('course-progress') || '{}')
@@ -38,8 +39,7 @@ try {
       completedModules,
       percent,
       completed: completedModules === course.modules.length,
-     started:
-     completedModules > 0 || savedCourses.includes(course.slug),
+      started: completedModules > 0 || savedCourses.includes(course.slug),
     }
   })
 
@@ -47,9 +47,7 @@ try {
     (course) => course.started && !course.completed
   )
 
-  const completedCourses = coursesWithProgress.filter(
-    (course) => course.completed
-  )
+  const completedCourses = coursesWithProgress.filter((course) => course.completed)
 
   return (
     <div className="pb-24 pt-24">
@@ -60,7 +58,7 @@ try {
           </p>
 
           <h1 className="mb-4 font-display text-4xl font-bold text-white md:text-5xl">
-            Continue your courses
+            Welcome back, {user?.firstName || 'Learner'}
           </h1>
 
           <p className="max-w-2xl text-slate-400">
@@ -74,25 +72,19 @@ try {
         <div className="mb-10 grid gap-4 md:grid-cols-3">
           <div className="rounded-3xl border border-border bg-surface/50 p-6">
             <BookOpen className="mb-4 text-cyan-400" />
-            <p className="text-3xl font-bold text-white">
-              {activeCourses.length}
-            </p>
+            <p className="text-3xl font-bold text-white">{activeCourses.length}</p>
             <p className="text-sm text-slate-400">Active courses</p>
           </div>
 
           <div className="rounded-3xl border border-border bg-surface/50 p-6">
             <CheckCircle2 className="mb-4 text-green-400" />
-            <p className="text-3xl font-bold text-white">
-              {completedCourses.length}
-            </p>
+            <p className="text-3xl font-bold text-white">{completedCourses.length}</p>
             <p className="text-sm text-slate-400">Completed courses</p>
           </div>
 
           <div className="rounded-3xl border border-border bg-surface/50 p-6">
             <GraduationCap className="mb-4 text-purple-400" />
-            <p className="text-3xl font-bold text-white">
-              {completedCourses.length}
-            </p>
+            <p className="text-3xl font-bold text-white">{completedCourses.length}</p>
             <p className="text-sm text-slate-400">Certificates earned</p>
           </div>
         </div>
@@ -203,5 +195,19 @@ try {
         </div>
       </section>
     </div>
+  )
+}
+
+export default function MyLearningPage() {
+  return (
+    <>
+      <SignedIn>
+        <MyLearningContent />
+      </SignedIn>
+
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
   )
 }

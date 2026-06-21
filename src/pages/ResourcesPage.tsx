@@ -36,65 +36,109 @@ export default function ResourcesPage() {
 
       <section className="pb-20">
         <div className="container-wide section-padding">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
-            <FilterTabs options={resourceCategories} active={category} onChange={setCategory} />
-            <label className="flex items-center gap-2 cursor-pointer">
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <FilterTabs
+              options={resourceCategories}
+              active={category}
+              onChange={setCategory}
+            />
+
+            <button
+              type="button"
+              onClick={() => setFreeOnly(!freeOnly)}
+              className="flex items-center gap-2"
+            >
               <div
-                onClick={() => setFreeOnly(!freeOnly)}
-                className={`w-10 h-5 rounded-full transition-colors cursor-pointer ${freeOnly ? 'bg-purple-600' : 'bg-surface-3 border border-border'}`}
+                className={`h-5 w-10 rounded-full transition-colors ${
+                  freeOnly
+                    ? 'bg-purple-600'
+                    : 'border border-border bg-surface-3'
+                }`}
               >
-                <div className={`w-4 h-4 rounded-full bg-white mt-0.5 transition-transform ${freeOnly ? 'translate-x-5' : 'translate-x-0.5'}`} />
+                <div
+                  className={`mt-0.5 h-4 w-4 rounded-full bg-white transition-transform ${
+                    freeOnly ? 'translate-x-5' : 'translate-x-0.5'
+                  }`}
+                />
               </div>
               <span className="text-sm text-slate-400">Free only</span>
-            </label>
+            </button>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((resource, i) => (
-              <motion.div
-                key={resource.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-              >
-                <div className="glass-card p-5 h-full hover:border-border-bright transition-all duration-300 hover:shadow-card-hover">
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                      <FileText size={18} className="text-purple-400" />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {resource.free ? (
-                        <span className="text-xs font-mono text-green-400 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/30">Free</span>
-                      ) : (
-                        <span className="text-xs font-mono text-slate-400 px-2 py-0.5 rounded-full bg-surface-3 border border-border flex items-center gap-1">
-                          <Lock size={10} /> Premium
+          {filtered.length === 0 ? (
+            <div className="rounded-3xl border border-border bg-surface/50 p-10 text-center text-slate-400">
+              No resources found for this filter.
+            </div>
+          ) : (
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {filtered.map((resource, i) => (
+                <motion.div
+                  key={resource.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                  className="h-full"
+                >
+                  <div className="glass-card flex h-full flex-col p-5 transition-all duration-300 hover:border-border-bright hover:shadow-card-hover">
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-purple-500/30 bg-purple-600/20">
+                        <FileText size={18} className="text-purple-400" />
+                      </div>
+
+                      <div className="flex flex-wrap items-center justify-end gap-2">
+                        {resource.free ? (
+                          <span className="rounded-full border border-green-500/30 bg-green-500/10 px-2 py-0.5 font-mono text-xs text-green-400">
+                            Free
+                          </span>
+                        ) : (
+                          <span className="flex items-center gap-1 rounded-full border border-border bg-surface-3 px-2 py-0.5 font-mono text-xs text-slate-400">
+                            <Lock size={10} /> Premium
+                          </span>
+                        )}
+
+                        <span className={typeColors[resource.type] || 'tag-purple'}>
+                          {resource.type}
                         </span>
+                      </div>
+                    </div>
+
+                    <h3 className="mb-2 font-display font-semibold text-white">
+                      {resource.title}
+                    </h3>
+
+                    <p className="mb-5 text-sm leading-relaxed text-slate-400">
+                      {resource.description}
+                    </p>
+
+                    <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-4">
+                      <span className="font-mono text-xs text-slate-500">
+                        {resource.size}
+                      </span>
+
+                      {resource.free ? (
+                        <a
+                          href={resource.downloadUrl}
+                          download
+                          className="flex items-center gap-1.5 text-sm font-display font-semibold text-cyan-400 transition-colors hover:text-cyan-300"
+                        >
+                          <Download size={14} />
+                          Download
+                        </a>
+                      ) : (
+                        <a
+                          href="/ebooks"
+                          className="flex items-center gap-1.5 text-sm font-display font-semibold text-slate-400 transition-colors hover:text-white"
+                        >
+                          <Lock size={14} />
+                          Get Access
+                        </a>
                       )}
-                      <span className={typeColors[resource.type]}>{resource.type}</span>
                     </div>
                   </div>
-
-                  <h3 className="font-display font-semibold text-white mb-2">{resource.title}</h3>
-                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">{resource.description}</p>
-
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-xs text-slate-500 font-mono">{resource.size}</span>
-                    {resource.free ? (
-                      <button className="flex items-center gap-1.5 text-sm font-display font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-                        <Download size={14} />
-                        Download
-                      </button>
-                    ) : (
-                      <button className="flex items-center gap-1.5 text-sm font-display font-semibold text-slate-400 hover:text-white transition-colors">
-                        <Lock size={14} />
-                        Get Access
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -49,7 +50,6 @@ export default function Navbar() {
     >
       <div className="container-wide section-padding">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div
               className="relative w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -67,7 +67,7 @@ export default function Navbar() {
                     WebkitTextFillColor: 'transparent',
                   }}
                 >
-                  A 
+                  A
                 </span>
               </div>
             </div>
@@ -80,11 +80,10 @@ export default function Navbar() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-             Academia
+              Aicadmia
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) =>
               link.children ? (
@@ -142,22 +141,39 @@ export default function Navbar() {
             )}
           </nav>
 
-          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link to="/my-learning">My Learning</Link>
-            <Link
-              to="/contact"
-              className="text-sm text-slate-400 hover:text-white transition-colors px-3 py-2"
-            >
-              Contact
-            </Link>
+            <SignedOut>
+              <Link
+                to="/sign-in"
+                className="text-sm text-slate-400 hover:text-white transition-colors px-3 py-2"
+              >
+                Sign In
+              </Link>
 
-            <Link to="/ebooks" className="btn-primary text-sm px-5 py-2.5">
-              Get Ebooks
-            </Link>
+              <Link to="/sign-up" className="btn-primary text-sm px-5 py-2.5">
+                Sign Up
+              </Link>
+            </SignedOut>
+
+            <SignedIn>
+              <Link
+                to="/my-learning"
+                className="text-sm text-slate-300 hover:text-white transition-colors px-3 py-2"
+              >
+                My Learning
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-sm text-slate-400 hover:text-white transition-colors px-3 py-2"
+              >
+                Contact
+              </Link>
+
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
 
-          {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-slate-300 hover:text-white transition-colors"
@@ -168,7 +184,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -212,19 +227,29 @@ export default function Navbar() {
               )}
 
               <div className="pt-3 flex flex-col gap-2">
-                <Link
-                  to="/contact"
-                  className="btn-secondary justify-center text-sm"
-                >
-                  Contact
-                </Link>
+                <SignedOut>
+                  <Link to="/sign-in" className="btn-secondary justify-center text-sm">
+                    Sign In
+                  </Link>
 
-                <Link
-                  to="/ebooks"
-                  className="btn-primary justify-center text-sm"
-                >
-                  Get Ebooks
-                </Link>
+                  <Link to="/sign-up" className="btn-primary justify-center text-sm">
+                    Sign Up
+                  </Link>
+                </SignedOut>
+
+                <SignedIn>
+                  <Link to="/my-learning" className="btn-secondary justify-center text-sm">
+                    My Learning
+                  </Link>
+
+                  <Link to="/contact" className="btn-secondary justify-center text-sm">
+                    Contact
+                  </Link>
+
+                  <div className="flex justify-center pt-2">
+                    <UserButton afterSignOutUrl="/" />
+                  </div>
+                </SignedIn>
               </div>
             </div>
           </motion.div>
