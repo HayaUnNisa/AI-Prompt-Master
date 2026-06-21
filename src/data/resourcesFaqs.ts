@@ -85,8 +85,8 @@ export const resources: Resource[] = [
       'Step-by-step guide to writing effective system prompts for custom GPTs, Claude Projects, and API integrations.',
     type: 'Guide',
     category: 'Advanced',
-    downloadUrl: '#',
-    free: false,
+    downloadUrl: '/resources/System_Prompt_Writing_Guide_Aicadmia.pdf',
+    free: true,
     size: '2.4 MB PDF',
   },
 ]
