@@ -16,7 +16,7 @@ export const courses: Course[] = [
     tags: ['Foundations', 'ChatGPT', 'Claude', 'Gemini'],
     coverImage:
       'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: true,
     modules: [
       {
@@ -64,7 +64,7 @@ export const courses: Course[] = [
     tags: ['Advanced', 'Workflows', 'System Prompts', 'Chaining'],
     coverImage:
       'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: true,
     modules: [
       {
@@ -103,7 +103,7 @@ export const courses: Course[] = [
     tags: ['Business', 'Marketing', 'Copywriting', 'Email'],
     coverImage:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: true,
     modules: [
   {
@@ -142,7 +142,7 @@ export const courses: Course[] = [
     tags: ['Students', 'Education', 'Research', 'Study'],
     coverImage:
       'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: false,
     modules: [
       {
@@ -180,7 +180,7 @@ export const courses: Course[] = [
     tags: ['Coding', 'Development', 'GitHub Copilot', 'Debugging'],
     coverImage:
       'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: false,
     modules: [
       {
@@ -219,7 +219,7 @@ export const courses: Course[] = [
     tags: ['Content', 'Blogging', 'YouTube', 'SEO'],
     coverImage:
       'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-    instructor: 'Academia Team',
+    instructor: 'Aicadmia Team',
     featured: false,
     modules: [
       {

@@ -19,7 +19,8 @@ export default function FAQPage() {
     <div className="pt-24 pb-20">
       <PageHero
       badge="FAQ"
-      title="Frequently Asked Questions"
+      title="Questions,"
+        titleHighlight="answered."
       description="Answers to the most common questions about prompt engineering, our courses, ebooks, and how to get the most out of AI tools."
        />
 

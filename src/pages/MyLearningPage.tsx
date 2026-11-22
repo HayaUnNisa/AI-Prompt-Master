@@ -1,3 +1,4 @@
+import TypeCover from "../components/ui/TypeCover"
 import { Link } from 'react-router-dom'
 import { SignedIn, SignedOut, RedirectToSignIn, useUser } from '@clerk/clerk-react'
 import {
@@ -112,11 +113,7 @@ function MyLearningContent() {
                   to={`/courses/${course.slug}`}
                   className="group grid gap-5 rounded-3xl border border-border bg-surface/50 p-4 transition-all hover:border-border-bright md:grid-cols-[220px_1fr]"
                 >
-                  <img
-                    src={course.coverImage}
-                    alt={course.title}
-                    className="h-40 w-full rounded-2xl object-cover"
-                  />
+                  <TypeCover title={course.title} label={course.category} className="h-40 w-full rounded-2xl object-cover" />
 
                   <div className="flex flex-col justify-center">
                     <p className="mb-2 text-xs font-mono text-purple-400">
@@ -157,21 +154,13 @@ function MyLearningContent() {
                 to={`/courses/${course.slug}`}
                 className="group rounded-3xl border border-border bg-surface/50 p-5 transition-all hover:border-border-bright"
               >
-                <img
-                  src={course.coverImage}
-                  alt={course.title}
-                  className="mb-5 h-40 w-full rounded-2xl object-cover"
-                />
+                <TypeCover title={course.title} label={course.category} className="mb-5 h-40 w-full rounded-2xl object-cover" />
 
                 <div className="mb-3 flex items-center justify-between text-xs text-slate-400">
-                  <span>{course.level}</span>
-                  <span className="flex items-center gap-1">
-                    <Star size={12} className="fill-yellow-400 text-yellow-400" />
-                    {course.rating}
-                  </span>
+                  <span>{course.level}</span>
                 </div>
 
-                <h3 className="mb-3 font-display text-lg font-semibold text-white group-hover:text-purple-200">
+                <h3 className="mb-3 text-lg font-medium text-white group-hover:text-purple-200">
                   {course.title}
                 </h3>
 

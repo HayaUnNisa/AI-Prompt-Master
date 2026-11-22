@@ -79,7 +79,7 @@ export function FAQPreview() {
           className="text-center mb-12"
         >
           <h2 className="section-heading mb-4">
-            Common <span className="gradient-text">Questions</span>
+            Questions, <span className="gradient-text">answered</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Answers to the questions we hear most often.
@@ -124,7 +124,7 @@ export function FAQPreview() {
 
         <div className="text-center">
           <Link to="/faq" className="btn-secondary inline-flex">
-            View All FAQs
+            All questions
             <ArrowRight size={16} />
           </Link>
         </div>

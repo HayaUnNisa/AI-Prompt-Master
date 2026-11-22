@@ -1,3 +1,4 @@
+import TypeCover from "../components/ui/TypeCover"
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
@@ -48,9 +49,9 @@ export default function CoursesPage() {
   return (
     <div>
       <PageHero
-        badge="Free Courses"
-        title="Build Real AI Skills"
-        titleHighlight="Step by Step"
+        badge="Courses"
+        title="Six short courses,"
+        titleHighlight="all free."
         description="Browse practical AI prompting courses built like a clean learning platform. Learn from structured modules, short lessons, quizzes, and beginner-friendly explanations."
       >
         <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-400">
@@ -59,15 +60,7 @@ export default function CoursesPage() {
             {courses.length} courses
           </span>
 
-          <span className="flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2">
-            <Users size={15} className="text-purple-400" />
-            16,000+ learners
-          </span>
 
-          <span className="flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2">
-            <Star size={15} className="fill-yellow-400 text-yellow-400" />
-            4.8 avg rating
-          </span>
         </div>
       </PageHero>
 
@@ -174,13 +167,8 @@ export default function CoursesPage() {
                       className="group block h-full overflow-hidden rounded-3xl border border-border bg-surface/60 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 hover:shadow-card-hover"
                     >
                       <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={course.coverImage}
-                          alt={course.title}
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                        <TypeCover title={course.title} label={course.category} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/40 to-transparent" />
 
                         <div className="absolute left-4 top-4 rounded-full border border-green-400/30 bg-green-500/15 px-3 py-1 text-xs font-semibold text-green-300">
                           Free
@@ -220,15 +208,7 @@ export default function CoursesPage() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-3 border-t border-border pt-5 text-xs text-slate-400">
-                          <span className="flex items-center gap-2">
-                            <Star size={14} className="fill-yellow-400 text-yellow-400" />
-                            {course.rating} rating
-                          </span>
 
-                          <span className="flex items-center gap-2">
-                            <Users size={14} />
-                            {course.students.toLocaleString()}
-                          </span>
 
                           <span className="flex items-center gap-2">
                             <Clock size={14} />
@@ -288,11 +268,7 @@ export default function CoursesPage() {
                       className="group grid gap-5 rounded-3xl border border-border bg-surface/50 p-4 shadow-card transition-all duration-300 hover:border-border-bright hover:bg-surface/70 md:grid-cols-[240px_1fr_auto]"
                     >
                       <div className="relative h-44 overflow-hidden rounded-2xl md:h-full">
-                        <img
-                          src={course.coverImage}
-                          alt={course.title}
-                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                        <TypeCover title={course.title} label={course.category} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
 
                         <div className="absolute left-3 top-3 rounded-full border border-green-400/30 bg-green-500/15 px-3 py-1 text-xs font-semibold text-green-300 backdrop-blur">
                           Free
@@ -335,16 +311,7 @@ export default function CoursesPage() {
                       </div>
 
                       <div className="flex flex-col justify-center gap-3 rounded-2xl border border-border bg-void/40 p-4 text-sm text-slate-400 md:min-w-56">
-                        <span className="flex items-center gap-2">
-                          <Star size={15} className="fill-yellow-400 text-yellow-400" />
-                          <strong className="text-white">{course.rating}</strong>
-                          rating
-                        </span>
 
-                        <span className="flex items-center gap-2">
-                          <Users size={15} className="text-purple-400" />
-                          {course.students.toLocaleString()} learners
-                        </span>
 
                         <span className="flex items-center gap-2">
                           <Clock size={15} className="text-cyan-400" />

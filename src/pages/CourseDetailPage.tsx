@@ -1,3 +1,4 @@
+import TypeCover from "../components/ui/TypeCover"
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -117,9 +118,6 @@ export default function CourseDetailPage() {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden pb-16 pt-28">
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="absolute left-1/4 top-20 h-96 w-96 rounded-full bg-purple-600/15 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-cyan-600/10 blur-3xl" />
 
         <div className="container-wide section-padding relative">
           <Link
@@ -163,15 +161,7 @@ export default function CourseDetailPage() {
               </p>
 
               <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                <span className="flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2">
-                  <Star size={15} className="fill-yellow-400 text-yellow-400" />
-                  {course.rating} rating
-                </span>
 
-                <span className="flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2">
-                  <Users size={15} className="text-purple-400" />
-                  {course.students.toLocaleString()} learners
-                </span>
 
                 <span className="flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2">
                   <Clock size={15} className="text-cyan-400" />
@@ -199,13 +189,8 @@ export default function CourseDetailPage() {
               className="rounded-3xl border border-border bg-surface/60 p-5 shadow-card backdrop-blur-xl"
             >
               <div className="relative mb-5 h-52 overflow-hidden rounded-2xl">
-                <img
-                  src={course.coverImage}
-                  alt={course.title}
-                  className="h-full w-full object-cover"
-                />
+                <TypeCover title={course.title} label={course.category} className="h-full w-full object-cover" />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-void via-void/30 to-transparent" />
               </div>
 
               <div className="mb-5">
@@ -584,7 +569,7 @@ export default function CourseDetailPage() {
 
           <aside className="hidden lg:block">
             <div className="sticky top-24 rounded-3xl border border-border bg-surface/50 p-6">
-              <h3 className="mb-4 font-display text-lg font-semibold text-white">
+              <h3 className="mb-4 text-lg font-medium text-white">
                 Course includes
               </h3>
 

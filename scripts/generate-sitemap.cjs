@@ -3,21 +3,21 @@ const path = require('path');
 
 const baseUrl = 'https://aicadmia.com';
 
+const seriesRoutes = Array.from({ length: 30 }, (_, i) => `/series/${i + 1}`);
+
 const staticRoutes = [
   '/',
   '/courses',
-  '/my-learning',
   '/prompt-library',
-  '/resources',
+  '/series',
+  '/ai-tools',
   '/ebooks',
-  '/blog',
+  '/blogs',
   '/about',
   '/contact',
   '/faq',
   '/privacy-policy',
   '/terms',
-  '/sign-in',
-  '/sign-up',
 ];
 
 function extractSlugs(filePath) {
@@ -44,12 +44,11 @@ const courseSlugs = extractSlugs(
 );
 
 const dynamicRoutes = [
-  ...blogSlugs.map((slug) => `/blog/${slug}`),
-  ...resourceSlugs.map((slug) => `/resources/${slug}`),
+  ...blogSlugs.map((slug) => `/blogs/${slug}`),
   ...courseSlugs.map((slug) => `/courses/${slug}`),
 ];
 
-const allRoutes = [...staticRoutes, ...dynamicRoutes];
+const allRoutes = [...staticRoutes, ...seriesRoutes, ...dynamicRoutes];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

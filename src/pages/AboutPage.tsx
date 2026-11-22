@@ -20,16 +20,14 @@ export default function AboutPage() {
           className="max-w-3xl mx-auto"
         >
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-mono font-medium mb-6">
-              About Haya Un Nisa
-            </div>
-            <h1 className="font-display font-bold text-4xl sm:text-5xl text-white mb-6 leading-tight">
-              Teaching the Skill That{' '}
-              <span className="gradient-text">Makes AI Useful</span>
+          <div className="mb-16">
+            <p className="eyebrow mb-5">About Aicadmia</p>
+            <h1 className="font-display text-[3.2rem] sm:text-7xl text-ink mb-6 leading-[0.95]">
+              Teaching the skill that{' '}
+              <span className="gradient-text">makes AI useful.</span>
             </h1>
             <p className="text-lg text-slate-400 leading-relaxed">
-              Haya Un Nisa is an independent educational platform focused on one thing: helping people communicate more effectively with AI tools.
+              Aicadmia is an independent educational platform focused on one thing: helping people communicate more effectively with AI tools.
             </p>
           </div>
 
@@ -43,7 +41,7 @@ export default function AboutPage() {
               The gap between a vague question and a well-structured prompt is enormous. The output quality difference is real and measurable. But most content about AI focuses on announcements, benchmarks, and hype — not on the practical skill of prompt writing.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              Haya Un Nisa exists to close that gap. Our courses, guides, and prompt library are built around the specific, learnable techniques that actually make a difference — for students, professionals, developers, and anyone else who wants to get more out of the AI tools they already have access to.
+              Aicadmia exists to close that gap. Our courses, guides, and prompt library are built around the specific, learnable techniques that actually make a difference — for students, professionals, developers, and anyone else who wants to get more out of the AI tools they already have access to.
             </p>
           </div>
 
@@ -72,7 +70,7 @@ export default function AboutPage() {
           <div className="glass-card p-6 mb-12 border-yellow-500/20">
             <h3 className="font-display font-semibold text-white mb-2">A Note on Independence</h3>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Haya Un Nisa is not affiliated with OpenAI, Anthropic, Google, or Microsoft. We do not receive payment from any AI company. The tools we recommend are based on our own testing and evaluation. Our revenue comes from ebook sales, not advertising or affiliate commissions.
+              Aicadmia is not affiliated with OpenAI, Anthropic, Google, or Microsoft. We do not receive payment from any AI company. The tools we recommend are based on our own testing and evaluation. Our recommendations are never paid placements.
             </p>
           </div>
 

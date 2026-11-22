@@ -34,7 +34,7 @@ function PromptCard({ prompt }: { prompt: typeof prompts[0] }) {
             <span className="tag-cyan">{prompt.difficulty}</span>
           </div>
 
-          <h3 className="font-display font-semibold text-white text-base">
+          <h3 className="font-medium text-white text-base">
             {prompt.title}
           </h3>
 
@@ -144,9 +144,9 @@ export default function PromptLibraryPage() {
   return (
     <div>
       <PageHero
-        badge="500+ Prompts"
-        title="Prompt"
-        titleHighlight="Library"
+        badge="100 prompts"
+        title="The prompt"
+        titleHighlight="library."
         description="Tested prompt templates organized by category. Copy, customize, and use immediately. New prompts added regularly."
       >
         <div className="inline-flex items-center gap-2 text-sm text-slate-400 bg-surface-2 border border-border rounded-xl px-4 py-2 font-mono">
@@ -217,7 +217,7 @@ export default function PromptLibraryPage() {
                     onClick={() => setCurrentPage(i + 1)}
                     className={`w-12 h-12 rounded-xl font-display font-semibold transition ${
                       currentPage === i + 1
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg shadow-purple-500/20'
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-cream shadow-lg shadow-purple-500/20'
                         : 'glass-card text-slate-300 hover:border-purple-500/50 hover:text-white'
                     }`}
                   >

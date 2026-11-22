@@ -1,175 +1,96 @@
 import { Link } from 'react-router-dom'
-import { Twitter, Youtube, Mail, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
+import { ArrowRight } from 'lucide-react'
+import Wordmark from './Wordmark'
 
-const footerLinks = {
+const columns: Record<string, { label: string; href: string }[]> = {
   Learn: [
-    { label: 'Free Courses', href: '/courses' },
-    { label: 'Prompt Library', href: '/prompt-library' },
-    { label: 'Resources', href: '/resources' },
-    { label: 'AI Tools Directory', href: '/ai-tools' },
+    { label: 'The 30-day series', href: '/series' },
+    { label: 'Courses', href: '/courses' },
+    { label: 'Prompt library', href: '/prompt-library' },
+    { label: 'AI tools', href: '/ai-tools' },
   ],
-  Content: [
-    { label: 'Blog', href: '/blogs' },
+  Read: [
     { label: 'Ebooks', href: '/ebooks' },
+    { label: 'Journal', href: '/blogs' },
+    { label: 'FAQ', href: '/faq' },
+  ],
+  Aicadmia: [
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
-  ],
-  Legal: [
-    { label: 'FAQ', href: '/faq' },
-    { label: 'Privacy Policy', href: '/privacy-policy' },
-    { label: 'Terms of Service', href: '/terms' },
+    { label: 'Privacy', href: '/privacy-policy' },
+    { label: 'Terms', href: '/terms' },
   ],
 }
 
 export default function Footer() {
   const [email, setEmail] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (email) {
-      setSubscribed(true)
-      setEmail('')
-    }
-  }
+  const [done, setDone] = useState(false)
 
   return (
-    <footer className="relative border-t border-border bg-void">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-purple-500/50 to-transparent" />
-
-      <div className="container-wide section-padding pt-16 pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4">
-              <div
-                className="relative w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{
-                  background: 'linear-gradient(135deg, #8b5cf6, #06b6d4)',
-                  padding: '2px',
-                }}
-              >
-                <div className="w-full h-full rounded-[9px] bg-void flex items-center justify-center">
-                  <span
-                    className="font-display font-bold text-sm"
-                    style={{
-                      background: 'linear-gradient(135deg, #a78bfa, #22d3ee)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                    }}
-                  >
-                    A
-                  </span>
-                </div>
-              </div>
-
-              <span
-                className="font-display font-bold text-lg tracking-wide"
-                style={{
-                  background: 'linear-gradient(135deg, #a78bfa, #22d3ee)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                Academia
-              </span>
-            </Link>
-
-            <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-              A practical learning platform for writing better AI prompts. Free
-              courses, a growing prompt library, and ebooks for every skill
-              level.
+    <footer className="bg-ink text-cream">
+      <div className="container-wide section-padding pt-20 pb-10">
+        <div className="grid lg:grid-cols-12 gap-14 pb-16 border-b border-cream/10">
+          <div className="lg:col-span-5">
+            <p className="font-display text-[2.6rem] leading-[1.05] text-cream">
+              One useful idea,
+              <br />
+              <span className="italic text-accent-light">every week.</span>
             </p>
-
-            <div>
-              <p className="text-sm font-display font-semibold text-white mb-3">
-                Weekly prompt tips — free
-              </p>
-
-              {subscribed ? (
-                <p className="text-sm text-cyan-400 font-mono">
-                  You are subscribed. Thank you.
-                </p>
-              ) : (
-                <form onSubmit={handleSubscribe} className="flex gap-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    className="flex-1 bg-surface-2 border border-border rounded-lg px-3 py-2 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
-                    required
-                  />
-
-                  <button
-                    type="submit"
-                    aria-label="Subscribe to weekly prompt tips"
-                    className="btn-primary px-4 py-2 text-sm"
-                  >
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </button>
-                </form>
-              )}
-            </div>
-
-            <div className="flex gap-3 mt-6">
-              <a
-                href="#"
-                aria-label="Visit Academia on Twitter"
-                className="w-9 h-9 rounded-lg bg-surface-2 border border-border flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 transition-all"
+            <p className="mt-4 text-[14px] text-cream/60 max-w-sm leading-relaxed">
+              A short letter with the prompt, tool or method we found most useful that week. No spam, unsubscribe anytime.
+            </p>
+            {done ? (
+              <p className="mt-6 text-[14px] text-accent-light">Thanks — you’re on the list.</p>
+            ) : (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  if (email) {
+                    setDone(true)
+                    setEmail('')
+                  }
+                }}
+                className="mt-6 flex max-w-sm border-b border-cream/30 focus-within:border-cream"
               >
-                <Twitter size={15} aria-hidden="true" />
-              </a>
-
-              <a
-                href="#"
-                aria-label="Visit Academia on YouTube"
-                className="w-9 h-9 rounded-lg bg-surface-2 border border-border flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 transition-all"
-              >
-                <Youtube size={15} aria-hidden="true" />
-              </a>
-
-              <a
-                href="mailto:hello@promptmaster.ai"
-                aria-label="Email Academia"
-                className="w-9 h-9 rounded-lg bg-surface-2 border border-border flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 transition-all"
-              >
-                <Mail size={15} aria-hidden="true" />
-              </a>
-            </div>
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@email.com"
+                  aria-label="Email address"
+                  className="flex-1 bg-transparent py-3 text-[14px] text-cream placeholder:text-cream/40 focus:outline-none"
+                />
+                <button type="submit" aria-label="Subscribe" className="px-2 text-cream/70 hover:text-cream">
+                  <ArrowRight size={18} />
+                </button>
+              </form>
+            )}
           </div>
 
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-display font-semibold text-sm text-white mb-4">
-                {category}
-              </h4>
-
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-slate-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+            {Object.entries(columns).map(([title, links]) => (
+              <div key={title}>
+                <p className="text-[11px] uppercase tracking-[0.14em] text-cream/40 mb-4">{title}</p>
+                <ul className="space-y-2.5">
+                  {links.map((l) => (
+                    <li key={l.href}>
+                      <Link to={l.href} className="text-[14px] text-cream/80 hover:text-cream transition-colors">
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="border-t border-border pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} Academia. All rights reserved.
-          </p>
-
-          <p className="text-xs text-slate-600">
-            Built for learners. Not affiliated with OpenAI, Anthropic, Google,
-            or any AI company.
+        <div className="pt-8 flex flex-col sm:flex-row gap-4 sm:items-center justify-between">
+          <Wordmark tone="cream" className="!text-[22px]" />
+          <p className="text-[12px] text-cream/40">
+            © {new Date().getFullYear()} Aicadmia. Practical AI education, written by people.
           </p>
         </div>
       </div>

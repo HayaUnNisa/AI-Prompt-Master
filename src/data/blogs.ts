@@ -9,7 +9,7 @@ export const blogs: Blog[] = [
       'Most people use ChatGPT like a search engine. This guide shows the exact framework to get better AI responses.',
     category: 'Beginner Guides',
     tags: ['ChatGPT', 'Prompting Basics', 'How-to'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '7 min read',
     coverImage:
@@ -25,7 +25,7 @@ export const blogs: Blog[] = [
       'Both Claude and ChatGPT are powerful writing tools, but they shine in different ways. Here is how to choose.',
     category: 'AI Comparisons',
     tags: ['Claude', 'ChatGPT', 'Writing'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '6 min read',
     coverImage:
@@ -41,7 +41,7 @@ export const blogs: Blog[] = [
       'Prompt chaining helps you break complex tasks into smaller AI steps for better results.',
     category: 'Advanced Prompting',
     tags: ['Prompt Chaining', 'Workflow', 'Automation'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '8 min read',
     coverImage:
@@ -57,7 +57,7 @@ export const blogs: Blog[] = [
       'Gemini works differently from other AI tools. These 8 tips will help you get much better results.',
     category: 'Gemini',
     tags: ['Gemini', 'Prompting', 'Google AI'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '6 min read',
     coverImage:
@@ -73,7 +73,7 @@ export const blogs: Blog[] = [
       'System prompts shape how AI behaves. Learn what they are and how to write better ones.',
     category: 'Prompt Engineering',
     tags: ['System Prompts', 'AI Setup', 'Prompting'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '7 min read',
     coverImage:
@@ -89,7 +89,7 @@ export const blogs: Blog[] = [
       'AI can be a powerful study tool if used correctly. Learn practical prompts students can use to improve learning.',
     category: 'Students',
     tags: ['Students', 'Study', 'AI Learning'],
-    author: 'Academia Team',
+    author: 'Aicadmia Team',
     date: '2026-06-16',
     readTime: '6 min read',
     coverImage:
@@ -105,7 +105,7 @@ export const blogs: Blog[] = [
     'Most people use AI badly without realizing it. Learn the simple communication framework professionals use.',
   category: 'Beginner Guides',
   tags: ['AI Communication', 'Prompting', 'Beginner'],
-  author: 'Academia Team',
+  author: 'Aicadmia Team',
   date: '2026-06-16',
   readTime: '6 min read',
   coverImage:
@@ -120,7 +120,7 @@ export const blogs: Blog[] = [
     'System prompts are the hidden instructions that shape how AI behaves. Learn what they are, why they matter, and how they work.',
   category: 'Prompt Engineering',
   tags: ['System Prompts', 'AI Assistants', 'Prompt Engineering'],
-  author: 'Academia Team',
+  author: 'Aicadmia Team',
   date: '2026-06-16',
   readTime: '5 min read',
   coverImage:
@@ -136,7 +136,7 @@ export const blogs: Blog[] = [
     'A practical list of ChatGPT prompts students can use to study smarter, understand topics faster, and improve learning without cheating.',
   category: 'Students',
   tags: ['ChatGPT', 'Students', 'Study Prompts'],
-  author: 'Academia Team',
+  author: 'Aicadmia Team',
   date: '2026-06-16',
   readTime: '5 min read',
   coverImage:

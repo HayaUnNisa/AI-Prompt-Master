@@ -83,8 +83,9 @@ export default function ContactPage() {
   return (
     <div className="pt-24 pb-20">
       <PageHero
-        badge="Get in Touch"
-        title="We Would Love to Hear From You"
+        badge="Contact"
+        title="Say"
+        titleHighlight="hello."
         description="Have a question about a course, a prompt technique, or just want to share feedback? Send us a message and we will get back to you."
       />
 

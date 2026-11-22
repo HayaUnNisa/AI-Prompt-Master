@@ -13,7 +13,7 @@ export default function FilterTabs({ options, active, onChange }: FilterTabsProp
           onClick={() => onChange(option)}
           className={`px-4 py-1.5 rounded-full text-sm font-body transition-all duration-200 ${
             active === option
-              ? 'bg-purple-600 text-white shadow-glow-purple'
+              ? 'bg-purple-600 text-cream shadow-glow-purple'
               : 'bg-surface-2 border border-border text-slate-400 hover:text-white hover:border-purple-500'
           }`}
         >

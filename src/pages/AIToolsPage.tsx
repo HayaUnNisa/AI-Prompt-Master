@@ -20,9 +20,9 @@ export default function AIToolsPage() {
   return (
     <div>
       <PageHero
-        badge="AI Tool Directory"
-        title="AI Tools"
-        titleHighlight="Worth Knowing"
+        badge="AI tools"
+        title="Tools worth"
+        titleHighlight="knowing."
         description="An honest overview of the most useful AI tools available today — what they are good for, their limitations, and when to use each one."
       />
 
@@ -51,7 +51,7 @@ export default function AIToolsPage() {
               >
                 <div className="glass-card p-5 h-full hover:border-border-bright transition-all duration-300 hover:shadow-card-hover">
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center font-display font-bold text-white text-sm`}>
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center font-medium text-white text-sm`}>
                       {tool.name.charAt(0)}
                     </div>
                     <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ export default function AIToolsPage() {
                     </div>
                   </div>
 
-                  <h3 className="font-display font-semibold text-white text-lg mb-2">{tool.name}</h3>
+                  <h3 className="font-medium text-white text-lg mb-2">{tool.name}</h3>
                   <p className="text-sm text-slate-400 mb-4 leading-relaxed">{tool.description}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-4">
@@ -77,7 +77,7 @@ export default function AIToolsPage() {
                     href={tool.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm font-display font-semibold text-purple-400 hover:text-purple-300 transition-colors"
+                    className="flex items-center gap-1.5 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
                   >
                     Visit {tool.name}
                     <ExternalLink size={13} />

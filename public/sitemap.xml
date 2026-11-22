@@ -12,17 +12,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/my-learning</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://aicadmia.com/prompt-library</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/resources</loc>
+    <loc>https://aicadmia.com/series</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/ai-tools</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,7 +32,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog</loc>
+    <loc>https://aicadmia.com/blogs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,77 +62,217 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/sign-in</loc>
+    <loc>https://aicadmia.com/series/1</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/sign-up</loc>
+    <loc>https://aicadmia.com/series/2</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/how-to-write-better-chatgpt-prompts</loc>
+    <loc>https://aicadmia.com/series/3</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/claude-vs-chatgpt-for-writing</loc>
+    <loc>https://aicadmia.com/series/4</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/prompt-chaining-guide</loc>
+    <loc>https://aicadmia.com/series/5</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/gemini-prompting-tips</loc>
+    <loc>https://aicadmia.com/series/6</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/system-prompts-explained</loc>
+    <loc>https://aicadmia.com/series/7</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/ai-prompts-for-students</loc>
+    <loc>https://aicadmia.com/series/8</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/how-to-talk-to-ai-like-a-pro</loc>
+    <loc>https://aicadmia.com/series/9</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/what-are-system-prompts</loc>
+    <loc>https://aicadmia.com/series/10</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/best-chatgpt-prompts-for-students</loc>
+    <loc>https://aicadmia.com/series/11</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/few-shot-prompting-vs-zero-shot-prompting</loc>
+    <loc>https://aicadmia.com/series/12</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/how-ai-memory-changes-prompting</loc>
+    <loc>https://aicadmia.com/series/13</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/how-to-build-reusable-prompt-templates</loc>
+    <loc>https://aicadmia.com/series/14</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aicadmia.com/blog/role-prompting-why-it-works</loc>
+    <loc>https://aicadmia.com/series/15</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/16</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/17</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/18</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/19</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/20</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/21</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/22</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/23</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/24</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/25</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/26</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/27</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/28</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/29</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/series/30</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/how-to-write-better-chatgpt-prompts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/claude-vs-chatgpt-for-writing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/prompt-chaining-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/gemini-prompting-tips</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/system-prompts-explained</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/ai-prompts-for-students</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/how-to-talk-to-ai-like-a-pro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/what-are-system-prompts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/best-chatgpt-prompts-for-students</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/few-shot-prompting-vs-zero-shot-prompting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/how-ai-memory-changes-prompting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/how-to-build-reusable-prompt-templates</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aicadmia.com/blogs/role-prompting-why-it-works</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

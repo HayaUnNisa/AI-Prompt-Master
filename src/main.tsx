@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { ClerkProvider } from '@clerk/clerk-react'
 import { Analytics } from '@vercel/analytics/react'
 import App from './App'
+import '@fontsource/instrument-serif/400.css'
+import '@fontsource/instrument-serif/400-italic.css'
+import '@fontsource-variable/inter'
+import '@fontsource/jetbrains-mono/400.css'
 import './index.css'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -17,29 +21,20 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       publishableKey={PUBLISHABLE_KEY}
       appearance={{
         variables: {
-          colorPrimary: '#7c3aed',
-          colorBackground: '#070816',
-          colorText: '#ffffff',
-          colorTextSecondary: '#94a3b8',
-          colorInputBackground: '#111827',
-          colorInputText: '#ffffff',
-          colorNeutral: '#64748b',
-          borderRadius: '14px',
+          colorPrimary: '#5B4BB0',
+          colorBackground: '#FFFFFF',
+          colorText: '#1B1830',
+          colorTextSecondary: '#4F4A68',
+          colorInputBackground: '#FAF9FD',
+          colorInputText: '#1B1830',
+          colorNeutral: '#1B1830',
+          borderRadius: '12px',
           fontFamily: 'Inter, system-ui, sans-serif',
         },
         elements: {
-          card: 'bg-[#0b1020] border border-white/10 shadow-2xl',
-          headerTitle: 'text-white',
-          headerSubtitle: 'text-slate-400',
-          socialButtonsBlockButton:
-            'bg-[#111827] border border-white/10 text-white hover:bg-[#1f2937]',
-          formFieldInput:
-            'bg-[#111827] border border-white/10 text-white placeholder:text-slate-500',
-          formButtonPrimary:
-            'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold',
-          footerActionLink: 'text-cyan-400 hover:text-cyan-300',
-          identityPreviewText: 'text-white',
-          formFieldLabel: 'text-slate-300',
+          card: 'bg-surface border border-border shadow-card',
+          formButtonPrimary: 'bg-ink hover:bg-accent text-cream font-medium normal-case',
+          footerActionLink: 'text-accent hover:text-accent-dark',
         },
       }}
     >

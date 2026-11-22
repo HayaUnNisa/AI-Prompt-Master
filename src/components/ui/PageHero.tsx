@@ -8,43 +8,33 @@ interface PageHeroProps {
   children?: React.ReactNode
 }
 
+/** Editorial page header: left-aligned serif title with the description set beside it. */
 export default function PageHero({ badge, title, titleHighlight, description, children }: PageHeroProps) {
   return (
-    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-600/10 blur-3xl rounded-full" />
-
-      <div className="container-wide section-padding relative">
+    <section className="pt-32 sm:pt-36 pb-12">
+      <div className="container-wide section-padding">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center"
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="grid lg:grid-cols-12 gap-8 items-end pb-12 border-b border-border"
         >
-          {badge && (
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-mono font-medium mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-              {badge}
-            </div>
-          )}
-
-          <h1 className="section-heading mb-4">
-            {titleHighlight ? (
-              <>
-                {title}{' '}
-                <span className="gradient-text">{titleHighlight}</span>
-              </>
-            ) : (
-              title
-            )}
-          </h1>
-
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
-            {description}
-          </p>
-
-          {children && <div className="mt-8">{children}</div>}
+          <div className="lg:col-span-7">
+            {badge && <p className="eyebrow mb-5">{badge}</p>}
+            <h1 className="font-display text-[3.2rem] sm:text-7xl leading-[0.95] text-ink">
+              {title}
+              {titleHighlight && (
+                <>
+                  {' '}
+                  <span className="italic text-accent">{titleHighlight}</span>
+                </>
+              )}
+            </h1>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-[15.5px] text-ink-2 leading-relaxed">{description}</p>
+            {children && <div className="mt-6">{children}</div>}
+          </div>
         </motion.div>
       </div>
     </section>

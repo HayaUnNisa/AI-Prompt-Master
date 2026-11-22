@@ -1,3 +1,4 @@
+import TypeCover from "../components/ui/TypeCover"
 import { useParams, Link } from 'react-router-dom'
 import type { ComponentType } from 'react'
 import { motion } from 'framer-motion'
@@ -46,7 +47,7 @@ export default function BlogDetailPage() {
             Article not found
           </h1>
           <Link to="/blogs" className="btn-primary inline-flex">
-            Back to Blog
+            Back to the journal
           </Link>
         </div>
       </div>
@@ -63,7 +64,7 @@ export default function BlogDetailPage() {
             Blog file not connected
           </h1>
           <Link to="/blogs" className="btn-primary inline-flex">
-            Back to Blog
+            Back to the journal
           </Link>
         </div>
       </div>
@@ -85,7 +86,7 @@ export default function BlogDetailPage() {
             size={14}
             className="group-hover:-translate-x-1 transition-transform"
           />
-          Back to Blog
+          Back to the journal
         </Link>
 
         <div className="grid lg:grid-cols-[1fr_320px] gap-12">
@@ -124,11 +125,7 @@ export default function BlogDetailPage() {
             </div>
 
             <div className="rounded-2xl overflow-hidden mb-10 h-64 sm:h-80">
-              <img
-                src={blog.coverImage}
-                alt={blog.title}
-                className="w-full h-full object-cover"
-              />
+              <TypeCover title={blog.title} label={blog.category} className="w-full h-full object-cover" />
             </div>
 
             <div className="prose-dark">
@@ -161,15 +158,11 @@ export default function BlogDetailPage() {
                     >
                       <div className="flex gap-3">
                         <div className="w-16 h-12 rounded-lg overflow-hidden flex-shrink-0">
-                          <img
-                            src={post.coverImage}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
+                          <TypeCover title={post.title} label={post.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                         </div>
 
                         <div>
-                          <p className="text-sm font-display text-slate-300 group-hover:text-white transition-colors line-clamp-2 leading-snug">
+                          <p className="text-sm text-slate-300 group-hover:text-white transition-colors line-clamp-2 leading-snug">
                             {post.title}
                           </p>
                           <p className="text-xs text-slate-500 mt-1">
@@ -189,7 +182,7 @@ export default function BlogDetailPage() {
               </h3>
 
               <p className="text-sm text-slate-400 mb-4">
-                Browse 500+ tested prompt templates organized by use case.
+                Browse 100 tested prompt templates organized by use case.
               </p>
 
               <Link

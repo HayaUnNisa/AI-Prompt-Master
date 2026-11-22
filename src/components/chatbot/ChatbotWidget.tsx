@@ -47,7 +47,7 @@ export default function ChatbotWidget() {
       id: '0',
       role: 'assistant',
       content:
-        'Hi! I am the Academia assistant. Ask me anything about writing better AI prompts, choosing the right AI tool, or getting a custom prompt template.',
+        'Hi! I am the Aicadmia assistant. Ask me anything about writing better AI prompts, choosing the right AI tool, or getting a custom prompt template.',
     },
   ])
 
@@ -139,8 +139,8 @@ export default function ChatbotWidget() {
               </div>
 
               <div>
-                <p className="text-sm font-display font-semibold text-white">
-                  Academia Assistant
+                <p className="text-sm font-medium text-white">
+                  Aicadmia Assistant
                 </p>
                 <p className="text-xs text-green-400">Online</p>
               </div>

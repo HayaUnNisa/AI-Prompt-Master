@@ -6,8 +6,6 @@ export default function NotFoundPage() {
   return (
     <div className="min-h-screen flex items-center justify-center pt-16 pb-20 relative overflow-hidden">
       {/* Background blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-wide section-padding text-center relative z-10">
         <motion.div
@@ -52,7 +50,7 @@ export default function NotFoundPage() {
 
           {/* Quick links */}
           <div className="glass-card p-8 max-w-xl mx-auto">
-            <h2 className="font-display text-lg font-semibold text-white mb-5">Popular pages</h2>
+            <h2 className="text-lg font-medium text-white mb-5">Popular pages</h2>
             <div className="grid grid-cols-2 gap-3 text-left">
               {[
                 { to: '/blogs', label: 'Blogs' },

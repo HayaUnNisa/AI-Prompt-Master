@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react'
 
 import Layout from './components/layout/Layout'
@@ -9,7 +8,8 @@ import BlogDetailPage from './pages/BlogDetailPage'
 import CoursesPage from './pages/CoursesPage'
 import CourseDetailPage from './pages/CourseDetailPage'
 import EbooksPage from './pages/EbooksPage'
-import ResourcesPage from './pages/ResourcesPage'
+import SeriesPage from './pages/SeriesPage'
+import SeriesDayPage from './pages/SeriesDayPage'
 import AIToolsPage from './pages/AIToolsPage'
 import PromptLibraryPage from './pages/PromptLibraryPage'
 import AboutPage from './pages/AboutPage'
@@ -35,10 +35,8 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 }
 
 function App() {
-  const [darkMode] = useState(true)
-
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <Router>
         <Layout>
           <Routes>
@@ -52,7 +50,9 @@ function App() {
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/courses/:slug" element={<CourseDetailPage />} />
             <Route path="/ebooks" element={<EbooksPage />} />
-            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/resources" element={<Navigate to="/ebooks" replace />} />
+            <Route path="/series" element={<SeriesPage />} />
+            <Route path="/series/:day" element={<SeriesDayPage />} />
             <Route path="/ai-tools" element={<AIToolsPage />} />
             <Route path="/prompt-library" element={<PromptLibraryPage />} />
             <Route path="/about" element={<AboutPage />} />

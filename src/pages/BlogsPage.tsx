@@ -1,3 +1,4 @@
+import TypeCover from "../components/ui/TypeCover"
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
@@ -23,9 +24,9 @@ export default function BlogsPage() {
   return (
     <div>
       <PageHero
-        badge="Knowledge Base"
-        title="Practical Prompting"
-        titleHighlight="Guides and Tutorials"
+        badge="The journal"
+        title="Notes on"
+        titleHighlight="prompting well."
         description="Guides, technique breakdowns, and tool comparisons — written for people who want to actually use AI better, not just read about it."
       />
 
@@ -55,12 +56,7 @@ export default function BlogsPage() {
                   <Link to={`/blogs/${blog.slug}`} className="group block h-full">
                     <div className="glass-card h-full overflow-hidden hover:border-border-bright transition-all duration-300 hover:shadow-card-hover">
                       <div className="relative h-44 overflow-hidden">
-                        <img
-                          src={blog.coverImage}
-                          alt={blog.title}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
+                        <TypeCover title={blog.title} label={blog.category} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                         <div className="absolute bottom-3 left-3">
                           <span className="tag-purple">{blog.category}</span>
                         </div>
