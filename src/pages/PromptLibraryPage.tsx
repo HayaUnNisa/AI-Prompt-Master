@@ -144,7 +144,7 @@ export default function PromptLibraryPage() {
   return (
     <div>
       <PageHero
-        badge="100 prompts"
+        badge={`${prompts.length} prompts`}
         title="The prompt"
         titleHighlight="library."
         description="Tested prompt templates organized by category. Copy, customize, and use immediately. New prompts added regularly."

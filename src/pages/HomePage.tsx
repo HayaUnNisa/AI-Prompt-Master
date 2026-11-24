@@ -8,6 +8,7 @@ import { seriesDays, currentDay, msUntilLaunch } from '../data/series'
 import { library } from '../data/library'
 import { courses } from '../data/courses'
 import { blogs } from '../data/blogs'
+import { prompts } from '../data/prompts'
 import { FAQPreview } from '../components/home/NewsletterFAQ'
 
 const reveal = {
@@ -106,7 +107,7 @@ function Hero() {
         <motion.dl {...reveal} className="mt-20 grid grid-cols-2 lg:grid-cols-4 border-y border-border">
           {[
             [String(courses.length), 'free courses', '/courses'],
-            ['100', 'tested prompts', '/prompt-library'],
+            [String(prompts.length), 'tested prompts', '/prompt-library'],
             [String(library.length), 'free ebooks', '/ebooks'],
             [String(blogs.length), 'journal articles', '/blogs'],
           ].map(([n, l, href], i) => (

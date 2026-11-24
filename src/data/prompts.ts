@@ -2282,4 +2282,14 @@ Build:
   tags: ['Legacy', 'Vision', 'Life'],
   useCase: 'Build long-term vision',
 },
+{
+  id: '101',
+  title: 'Café Blog Post Outline (With Checkable Sources)',
+  prompt: `You're a freelance writer for a small café in Riyadh. Write an outline for a 1,000-word blog post: "Why your café needs its own website (not just Instagram)." Include 5 sections, one real-life example idea per section, and list every statistic you use with its exact source, so I can check it.`,
+  category: 'Content Writing',
+  tool: 'ChatGPT / Claude',
+  difficulty: 'Intermediate',
+  tags: ['Blog Outline', 'Small Business', 'Freelance Writing'],
+  useCase: 'Plan a client blog post with sources you can verify',
+},
 ]
