@@ -23,7 +23,7 @@ We do not use advertising cookies or share cookie data with advertising networks
     title: 'Third-Party Services',
     content: `We use third-party services including analytics platforms and payment processors. These services have their own privacy policies which govern their handling of your data. We do not control third-party services and encourage you to review their policies independently.
 
-Haya Un Nisa is not affiliated with OpenAI, Anthropic, Google, Microsoft, or any other AI company mentioned on this site.`,
+Aicadmia is not affiliated with OpenAI, Anthropic, Google, Microsoft, or any other AI company mentioned on this site.`,
   },
   {
     title: 'Data Retention',
@@ -35,7 +35,7 @@ Haya Un Nisa is not affiliated with OpenAI, Anthropic, Google, Microsoft, or any
   },
   {
     title: 'Children',
-    content: `Haya Un Nisa is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us so we can remove it promptly.`,
+    content: `Aicadmia is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us so we can remove it promptly.`,
   },
   {
     title: 'Changes to This Policy',
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
 
           <div className="glass-card p-6 mb-10 border-cyan-500/20">
             <p className="text-slate-300 leading-relaxed">
-              This Privacy Policy explains how Haya Un Nisa collects, uses, and protects your personal information when you use this website. We are committed to protecting your privacy and handling your data with care and transparency.
+              This Privacy Policy explains how Aicadmia collects, uses, and protects your personal information when you use this website. We are committed to protecting your privacy and handling your data with care and transparency.
             </p>
           </div>
 

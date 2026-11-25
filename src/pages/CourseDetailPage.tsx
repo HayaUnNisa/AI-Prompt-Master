@@ -548,9 +548,10 @@ export default function CourseDetailPage() {
 
               {courseCompleted ? (
                 <Certificate
-                  studentName="Student"
+                  courseSlug={course.slug}
                   courseTitle={course.title}
-                  instructor={course.instructor}
+                  lessons={course.lessons}
+                  duration={course.duration}
                 />
               ) : (
                 <div className="rounded-2xl border border-border bg-void/40 p-5">

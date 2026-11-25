@@ -123,3 +123,16 @@
   line-height: 1.4;
 }
 .prose-dark ul li::marker { color: #5B4BB0; }
+
+/* Certificate printing: only the A4 sheet is printed */
+.cert-print { display: none; }
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  body.printing-certificate > *:not(.cert-print) { display: none !important; }
+  body.printing-certificate { background: #fff !important; margin: 0; }
+  body.printing-certificate .cert-print {
+    display: block !important;
+    width: 297mm; height: 210mm; overflow: hidden;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+}

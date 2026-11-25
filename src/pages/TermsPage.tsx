@@ -7,13 +7,13 @@ const sections = [
   },
   {
     title: 'Educational Content',
-    content: `The content provided on Haya Un Nisa, including courses, blog posts, prompt templates, and guides, is intended for educational purposes only. While we strive to keep information accurate and up to date, the field of AI changes rapidly and some content may become outdated.
+    content: `The content provided on Aicadmia, including courses, blog posts, prompt templates, and guides, is intended for educational purposes only. While we strive to keep information accurate and up to date, the field of AI changes rapidly and some content may become outdated.
 
 We do not guarantee any specific outcome from applying the techniques taught on this platform. Results depend on your effort, the tools you use, and the context in which you apply the techniques.`,
   },
   {
     title: 'Intellectual Property',
-    content: `All content on Haya Un Nisa, including text, graphics, course materials, and prompt templates, is the property of Haya Un Nisa and is protected by applicable intellectual property laws.
+    content: `All content on Aicadmia, including text, graphics, course materials, and prompt templates, is the property of Aicadmia and is protected by applicable intellectual property laws.
 
 Free content on the site may be used for personal learning purposes. You may not reproduce, distribute, or sell any content from this site without explicit written permission. Ebook content purchased through the site is licensed for personal use only and may not be resold or redistributed.`,
   },
@@ -35,11 +35,11 @@ You may not use content from this site to build competing educational products w
   },
   {
     title: 'Disclaimer of Warranties',
-    content: `Haya Un Nisa is provided "as is" without warranties of any kind. We do not warrant that the site will be error-free, uninterrupted, or free of harmful components. We do not make any warranties about the accuracy, completeness, or suitability of the content for any particular purpose.`,
+    content: `Aicadmia is provided "as is" without warranties of any kind. We do not warrant that the site will be error-free, uninterrupted, or free of harmful components. We do not make any warranties about the accuracy, completeness, or suitability of the content for any particular purpose.`,
   },
   {
     title: 'Limitation of Liability',
-    content: `To the maximum extent permitted by law, Haya Un Nisa shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the site or its content. Our total liability for any claim arising from the use of this site shall not exceed the amount you paid for any ebook purchase in the preceding 12 months.`,
+    content: `To the maximum extent permitted by law, Aicadmia shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the site or its content. Our total liability for any claim arising from the use of this site shall not exceed the amount you paid for any ebook purchase in the preceding 12 months.`,
   },
   {
     title: 'Changes to Terms',
@@ -73,7 +73,7 @@ export default function TermsPage() {
 
           <div className="glass-card p-6 mb-10 border-purple-500/20">
             <p className="text-slate-300 leading-relaxed">
-              Please read these Terms and Conditions carefully before using Haya Un Nisa. They set out your rights and responsibilities as a user of this website and its content.
+              Please read these Terms and Conditions carefully before using Aicadmia. They set out your rights and responsibilities as a user of this website and its content.
             </p>
           </div>
 
