@@ -2292,4 +2292,18 @@ Build:
   tags: ['Blog Outline', 'Small Business', 'Freelance Writing'],
   useCase: 'Plan a client blog post with sources you can verify',
 },
+{
+  id: '102',
+  title: 'Etsy Budget Planner That Fixes Real Complaints',
+  prompt: `I'm making a printable budget planner to sell on Etsy. Here are real complaints from 1–3 star reviews of a best-selling one:
+1. [paste complaint]
+2. [paste complaint]
+3. [paste complaint]
+Design a better one-page monthly budget planner that fixes these complaints. Give me: a title, the sections in order, the exact labels for each section, and 2 short tips to print at the bottom. Keep it simple and low-ink.`,
+  category: 'Business',
+  tool: 'ChatGPT / Claude',
+  difficulty: 'Beginner',
+  tags: ['Etsy', 'Printables', 'Digital Products'],
+  useCase: 'Design a printable that sells by fixing what buyers complain about',
+},
 ]
